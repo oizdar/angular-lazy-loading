@@ -41,4 +41,8 @@
   </p>
 </section>
 
-<app-offer-preview />
+@defer(on viewport) { // interaction; prefetch on hover  ... itp
+  <app-offer-preview />
+} @placeholder {
+  <p class="fallback">Loading offer preview...</p>
+}
